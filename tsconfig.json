@@ -13,9 +13,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {
-      "*": ["node_modules/*"],
       "@assets/*": ["./assets/*"],
-      "@src/*": ["./src/*"]
+      "src/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@theme": ["./src/theme/*"]
     }
   },
   "include": ["src/**/*", "tools/**/*"]

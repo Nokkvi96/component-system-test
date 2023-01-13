@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   mode: 'production',
   entry: ['./src/main.tsx'],
@@ -12,8 +14,11 @@ module.exports = {
   plugins: [...require('./webpack.plugins')],
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+    roots: [
+      path.resolve(__dirname, ''),
+      path.resolve(__dirname, 'node_modules'),
+    ],
     alias: {
-      // Custom Aliases
       ...require('./webpack.aliases'),
     },
   },

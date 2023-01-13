@@ -15,13 +15,16 @@
   "parser": "@typescript-eslint/parser",
   "settings": {
     "import/resolver": {
+      "typescript": {},
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
       "alias": {
         "map": [
-          ["@src", "./src"],
-          ["@assets", "./assets"]
+          ["src", "./src"],
+          ["@assets", "./assets"],
+          ["@components", "./src/components"],
+          ["@theme", "./src/theme"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
@@ -31,6 +34,7 @@
     }
   },
   "rules": {
+    "alwaysTryTypes": "true",
     "react/prop-types": "off",
     "@typescript-eslint/no-var-requires": "off"
   }
